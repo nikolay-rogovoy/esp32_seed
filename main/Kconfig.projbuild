@@ -1,0 +1,37 @@
+menu "ESP32 Seed"
+
+    config APP_WIFI_SSID
+        string "Wi-Fi SSID"
+        default ""
+        help
+            SSID of the 2.4 GHz network to connect to.
+            If empty, the board starts its own access point (SoftAP) instead.
+
+    config APP_WIFI_PASSWORD
+        string "Wi-Fi password"
+        default ""
+        help
+            Password of the network. Empty for an open network.
+
+    config APP_AP_SSID
+        string "SoftAP SSID"
+        default "ESP32-seed"
+        help
+            Name of the access point started when Wi-Fi SSID is empty.
+
+    config APP_AP_PASSWORD
+        string "SoftAP password"
+        default "esp32seed"
+        help
+            WPA2 password of the access point, at least 8 characters.
+            Empty for an open access point.
+
+    config APP_LED_GPIO
+        int "Status LED GPIO (-1 to disable)"
+        range -1 33
+        default 2
+        help
+            GPIO of the on-board LED blinked by a FreeRTOS task.
+            Most ESP32 DevKit V1 boards have a blue LED on GPIO2.
+
+endmenu

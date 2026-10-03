@@ -1,0 +1,16 @@
+# Значения по умолчанию для sdkconfig.
+# Применяются при первой генерации sdkconfig (или после его удаления).
+
+# Чип и плата: ESP32-D0WDQ6, 4 МБ Flash
+CONFIG_IDF_TARGET="esp32"
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_ESPTOOLPY_FLASHMODE_DIO=y
+
+# Процессор на максимальной частоте
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+
+# Таблица разделов: одно приложение, 1.5 МБ под прошивку
+CONFIG_PARTITION_TABLE_SINGLE_APP_LARGE=y
+
+# FreeRTOS: тик 1 мс
+CONFIG_FREERTOS_HZ=1000

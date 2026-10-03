@@ -1,0 +1,5 @@
+# compile_commands.json появляется в build/ после первой `idf.py build`.
+# Флаги xtensa-gcc (-mlongcalls, -fstrict-volatile-bitfields, ...) clang не понимает — убираем их.
+CompileFlags:
+  CompilationDatabase: build
+  Remove: [-m*, -f*]

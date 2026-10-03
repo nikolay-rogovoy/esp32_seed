@@ -1,0 +1,6 @@
+build/
+managed_components/
+
+# Генерируется из sdkconfig.defaults + menuconfig, содержит пароль Wi-Fi
+sdkconfig
+sdkconfig.old
